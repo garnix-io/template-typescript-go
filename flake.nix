@@ -25,7 +25,12 @@
             # that builds the frontend bundle. This will be served as static
             # files by the server.
             frontend-bundle = pkgs.callPackage ./frontend { self = inputs.self; };
+            backend = pkgs.callPackage ./backend { };
           };
+          devShells.default = pkgs.mkShell
+            {
+              nativeBuildInputs = [ pkgs.go pkgs.gopls ];
+            };
         })
     //
     {
