@@ -1,5 +1,5 @@
 { buildGoModule }: buildGoModule {
   name = "backend";
   src = ./.;
-  vendorHash = null;
+  vendorHash = "sha256-8wYERVt3PIsKkarkwPu8Zy/Sdx43P6g2lz2xRfvTZ2E=";
 }
