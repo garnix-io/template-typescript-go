@@ -1,6 +1,8 @@
 # template-wip
 
-A garnix-compatible repo configuring an example server with a typescript frontend and a wip backend.
+A garnix-compatible repo configuring an example server with a typescript
+frontend and a wip backend. You can see this repo deployed
+[here](http://server.main.template-wip.garnix-io.garnix.me/).
 
 To deploy this on garnix:
 
