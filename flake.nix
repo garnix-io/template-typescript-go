@@ -1,5 +1,5 @@
 {
-  description = "garnix example server a typescript frontend and a wip backend";
+  description = "garnix example server with a typescript frontend and a go backend";
 
   # Add your nix dependencies here.
   inputs = {
