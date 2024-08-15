@@ -29,7 +29,7 @@
           };
           devShells.default = pkgs.mkShell
             {
-              nativeBuildInputs = [ pkgs.go pkgs.gopls ];
+              nativeBuildInputs = [ pkgs.nodejs pkgs.go pkgs.gopls ];
             };
         })
     //
