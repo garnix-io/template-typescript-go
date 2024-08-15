@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gorilla/mux"
 )
 
 func handleRequest(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello from go\n")
+	fmt.Fprintf(w, time.Now().Format(time.DateTime))
 }
 
 func main() {
