@@ -1,8 +1,10 @@
 { pkgs, lib, self, ... }:
 
-# TODO: Change these variables to whatever works for you
-let # This lets you log in via SSH
-  sshKey = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzsYv/IpqFuE29NVBQrslVqvdeEdPVfQqSg1pVyTh40j2Z3UK8uK6fCSLGyQZNsqyO5B8785tqLL9MoVJMfqVPhSUiRZqXvjMFXuxCTqV5YndXc8qFNfjgPxVGWUrZQsGpFQKj8LAbSXjxdBKFZvuU9/vo9GlxBUhcKdDLax4r/OqGOBSIRb5Cgwt2i85Yi1uB5hivdTL28Csx19IlmlAxJyRRltxOetC2eD9jF3qRQQciz/CjXUSGNKcyI2PhnCpeoH9v7j2+UrTsyN0JVGfMJoOvYW97QE3vYvefK1VGWnU8BrS3ybW4c4snHDr5OzaBNfNkmw765bM89HRiTL+HBbkGx1f739UCdcZnYiUzZBKoJRw4J4XqlIyuApCRrRUOG8PBPcClh1kldMxeJxpmGmIIdvOh++kIffOkOfCnEZUVlmqwLxeeYMZTPJ13yL9bQis1vR2dqeNud25eyK1FbaMTt5GE08Zcg/j39YBLxz/0hK4uE3bQbOA+eCEgypU= shahn@lissabon";
+let
+  # TODO: add your public ssh key here to be able to log into the deployed host (as user `me`).
+  sshKeys = [
+    "ssh-rsa <YOUR_PUBLIC_SSH_KEY>"
+  ];
   backendPort = "3000";
 in
 {
@@ -21,7 +23,7 @@ in
     isNormalUser = true;
     description = "me";
     extraGroups = [ "wheel" "systemd-journal" ];
-    openssh.authorizedKeys.keys = [ sshKey ];
+    openssh.authorizedKeys.keys = sshKeys;
   };
   # This allows you to use `sudo` without a password when ssh'ed into the machine.
   security.sudo.wheelNeedsPassword = false;
