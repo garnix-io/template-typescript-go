@@ -6,7 +6,7 @@ frontend and a go backend. You can see this repo deployed
 
 To deploy this on garnix:
 
-1) Create a [https://garnix.io](garnix) account if you don't have one yet.
+1) Create a [garnix](https://garnix.io) account if you don't have one yet.
 2) Fork this repo.
 3) Make sure the garnix GitHub App is enabled on this repo.
 4) Change the lines marked [TODO](https://github.com/search?q=repo%3Agarnix-io%2Ftemplate-typescript-go%20todo&type=code) to reflect your needs.
